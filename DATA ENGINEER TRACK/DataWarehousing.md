@@ -41,3 +41,5 @@ C'est la phase de conception du Data Warehouse
 **Support/Maintenance - Test & Deployement**
 
 C'est la phase où l'équipe forme les utilisateurs finaux et maintient le warehouse.
+- Test les Data Analyst et Scientist testent le système pour confirmer que leurs exigences commerciales sont satisfaites
+- Le Data Engineer deploie met l'entrepot de données à la disposition de l'organisation. Après le déploiement, toute modification importante suivra les mêmes étapes à partir de la phase de planification.
