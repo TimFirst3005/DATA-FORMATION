@@ -1,6 +1,8 @@
 # INTRODUCTION A L'ENTREPOSAGE DE DONNEES/DATA WAREHOUSING
 
-## C'est quoi un entrepot de données ?
+## LES BASES DU DATA WAREHOUSE
+
+### C'est quoi un entrepot de données ?
 
 Il s'agit tout simplement d'un système informatique conçu pour stocker et analyser de grandes quantités de données pour une organisation.
 
@@ -11,7 +13,7 @@ Elle est construite dans l'objectif de :
 - conduire la prise de décision organisationnelle, avec l'object de trouver des moyens d'innover en se basant sur les informations tirées des données après analyses.
 
 
-## Différences Data Warehouse, Data Mart et Data Lake
+### Différences Data Warehouse, Data Mart et Data Lake
 
 Les BD utilisent des tables pour stocker des informations de manière structurée avec des lignes et colonnes. Et donc les organisations les utilisent pour stocker leurs différentes transactions; on les appele **BD transactionnelles**.
 
@@ -22,9 +24,9 @@ Les BD utilisent des tables pour stocker des informations de manière structuré
 Le Data Lake, à la différence du Data Warehouse, peut aussi contenir des données non structurées.
 
 
-## Analyse Organisationnelle de Data Warehouse
+### Analyse Organisationnelle de Data Warehouse
 
-### Cycle de vie d'un Projet de Data Warehouse
+#### Cycle de vie d'un Projet de Data Warehouse
 
 **La Planification**
 
@@ -43,3 +45,27 @@ C'est la phase de conception du Data Warehouse
 C'est la phase où l'équipe forme les utilisateurs finaux et maintient le warehouse.
 - Test les Data Analyst et Scientist testent le système pour confirmer que leurs exigences commerciales sont satisfaites
 - Le Data Engineer deploie met l'entrepot de données à la disposition de l'organisation. Après le déploiement, toute modification importante suivra les mêmes étapes à partir de la phase de planification.
+
+#
+## ARCHITECTURE ET PROPRIETES DE L'ENTREPÔT
+
+### **Differentes Couches d'un Data Warehouse**
+
+#### **Les couches**
+
+![alt text](image.png)
+
+**N°01 : Data Source**, Celle-ci contenant la source de données
+- les fichiers 
+- les BD
+
+**N°02 : Data Staging**, C'est là que se trouvent toutes les données pendant la phase de l'ETL. Le processus ETL lui même les met en staging ou temporairement dans des tables afin qu'elles soient pretes à être utilisées dans les étapes ulterieures. Cette couche génère des données prêtes à être stockés.
+
+**N°03 : Data Storage**, Ici, les données sont stockés dans l'entrepôt de données. Il contient également tous les Data Mart utilisés.
+
+**N°04 : Data Presentation**, C'est là que les données sont mis à disposition des utilisateur finaux.
+C'est à partir de cette couche que les utilisateurs intéragissent avec les données stockées, que les requêtes sont exécutées pour faciliter l'analyse.
+Cette couche comprend également 
+- des outils BI, 
+- des outils d'EDA
+- les requêtes utilisateur directes
