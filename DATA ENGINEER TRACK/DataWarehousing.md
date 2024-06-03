@@ -69,3 +69,33 @@ Cette couche comprend également
 - des outils BI, 
 - des outils d'EDA
 - les requêtes utilisateur directes
+
+
+### **L'Architecture**
+
+Nous en parlerons de deux (02)
+
+**1- L'architecture Top-Down ou Approche descendante** propulsée par Bill Inmon
+
+Bill considerait l'entrepôt de données comme un outil permettant de contenir les données de l'organisation. L'éssentiel de cette architecture est que l'organisation doit décider de **la dénomination**, **la définition**, **les données à valider s'il y a des conflits** et toutes les autres opérations sur toutes les données avant qu'elles n'entrent dans l'entrepôt de données.
+
+En plus, cette architecture stocke les données dans l'entrepôt sous forme normalisée
+
+Les données sont ensuite transférées vers les Data Mart axés sur le service où les utilisateurs finaux et les applications peuvent les intérroger. 
+
+**Ses avantages** 
+- La conformité des sources de données d'entrée en definition unique que l'organisation s'accorde fait de l'entrepôt une source éfficace de vérité.
+- Puisque les données sont normalisées dans l'entrepôt, moins de stockage est nécessaire
+- la création de nouveaux Data mart est relativement simple.
+
+**Désavantages**
+- Etant données que les données sont normalisées, elle necessitent davantages de jointures pour les rapports conduisant ainsi des réponses plus lentes
+- Egalement, l'alignement de l'organisation sur la définition données peut necessiter beaucoup de travail initial et donc *Un coup de demarage élevé pour les projets de DW*.
+
+
+**2- L'architecture Bottom-Up ou Approche ascendante** propulsée par Ralph Kimball
+
+Dans cette approche, l'accent est mis sur le passage des données aux rapports rapidement que possible.
+
+Une Fois les données introduites, elles sont denormalisées dans un schéma en étoile. ***Le schéma en étoile** est un moyen de stocker des données qui rend l'écriture de requêtes simple et rapide*.
+
