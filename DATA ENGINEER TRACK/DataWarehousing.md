@@ -141,3 +141,10 @@ Par la suite les Data Mart sont intégrés dan le DW.
 
 
 ***Et donc, lors de la création d'un Data Warehouse, il est important de prendre en compte les forces et faiblesses de chaque architecture et les confronter avec nos objetifs de projet afin de produire un résultat éfficient.***
+
+
+## **SYSTEMES OLAP ET OLTP**
+
+OLAP : *OnLine Analytical Processing ou Traitement Analytique en Ligne*
+
+Il s'agit d'un outil permettant de faire des analyses multidimensionnelles à grande vitesse sur des grans volumes de données provenant d'un DW, DM ou toute autre source. Ils sont optimisés pour l'analyse.
