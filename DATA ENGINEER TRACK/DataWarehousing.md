@@ -143,8 +143,40 @@ Par la suite les Data Mart sont intégrés dan le DW.
 ***Et donc, lors de la création d'un Data Warehouse, il est important de prendre en compte les forces et faiblesses de chaque architecture et les confronter avec nos objetifs de projet afin de produire un résultat éfficient.***
 
 
-## **SYSTEMES OLAP ET OLTP**
+### **SYSTEMES OLAP ET OLTP**
 
+#### **OLAP**
 OLAP : *OnLine Analytical Processing ou Traitement Analytique en Ligne*
 
 Il s'agit d'un outil permettant de faire des analyses multidimensionnelles à grande vitesse sur des grans volumes de données provenant d'un DW, DM ou toute autre source. Ils sont optimisés pour l'analyse.
+
+**Le Cube OLAP** : Au coeur du système OLAP se trouve le cube de données OLAP, une base multidimentionnelle qui le permet de traiter et d'analyser plusieurs dimensions de données plus rapidement qu'une BD relationnelle traditionnelle.
+
+Pour exemple : imaginons que nous nous intéressons aux ventes d'une entreprise par région, année et produit.
+![alt text](image-1.png)
+Si nous imagninons un cube, les différentes arrètes du cube ou la largeur, la longueur et la hauteur représenteront l'une ces dimensions. Nous aurons alors le total des ventes pour les dimensions où ces bords se croisent.
+
+Le cube de données peut explorer ou agréger les ventes totales par chaque dimensions.
+
+Ici, les dimensions sont la région, l'année, le produit et le total des ventes est la valeur qui est agrégée ou desagrégée en fonction des dimensions sélectionnées.
+
+**Hypercube** : les cubes de données ayant plus de trois dimensions sont appelés hypercube.
+
+
+### **OLTP**
+
+OLTP : *OnLine Transaction Processing ou Traitement des Transactions en Ligne*
+
+Il est optimisé pour le traitement de grands volumes de données de transactions et requêtes de bases de données simple aussi rapidement que possible.
+
+Les utiisations typiques des systèmes OLTP inclus les terminaux de paiement et les réservations.
+
+Les requêtes pour les systèmes OLTP ont tendence à n'affecter que quelques ligne de données dans la BD. Ils sont souvent critiques pour l'entreprise et ne sont pas utilisés pour l'analyse.
+
+***Un exemple Concrêt*** : 
+Dans une entreprise de carte crédit, un système OLTP peut suivre l'achat de chaque client et met à jour son solde actuel. Ce système permettra de suivre des milliers d'achats et leur mis à jour chaque seconde mais pas pour analyser les habitudes d'achat des client.
+
+
+### **En resumé**
+
+OLAP est conçu pour prendre en charge l'analyse des données, exécuter des requêtes complexes de BD relationnelles volumineuses tandis que OLTP est conçu pour être très rapide à effectuer des requêtes simples qui se concentrent sur quelques lignes de données.
