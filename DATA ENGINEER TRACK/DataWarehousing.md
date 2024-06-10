@@ -180,3 +180,43 @@ Dans une entreprise de carte crédit, un système OLTP peut suivre l'achat de ch
 ### **En resumé**
 
 OLAP est conçu pour prendre en charge l'analyse des données, exécuter des requêtes complexes de BD relationnelles volumineuses tandis que OLTP est conçu pour être très rapide à effectuer des requêtes simples qui se concentrent sur quelques lignes de données.
+
+
+## Modelisation des Données Dans le DW
+
+**La modélisation** fait référence à la manière dont nous organisons les données dans une base de Données.
+
+Parlans de modélisation, les schémas en étoile(star) et en flocon de neige (Snowflake) sont deux(02) approches courantes pour un DW utilisant l'approche ascendante de Kimball pour organiser les données.
+
+Ces modèles de données dénormalisent les données organisationnelle en tables de dimensions et tables de faits.
+
+**Une table de faits** se compose de mesures ou metriques sur un processus organisationel.
+
+**La table de dimension** contient des attributs et caractéristiques qui décrivent les données de la table de faits. 
+
+
+**Un schéma en étoile** est une structure organisationnelle qui utilise une seule table de fait et une ou plusieurs tables de dimension.
+
+**Un schéma en flocon de neige (snowflake)** est similaire à un schéma en étoile. Cependant au moins une des tables dimentionelles n'indique pas directement une jointure à la table des faits mais par une jointure avec une autre table de dimension.
+
+### Etapes du processus de création d'une architecture de KIMBALL (schema en étoile ou snowflake)
+
+**1- Selectioner un processus organisationnel** pour lequel nous souhaitons créer le modèle de données(Ex. Facturation, surveillance qualité ou marketing)
+
+*Pour rappel l'approche de KIMBALL modelise d'abord un service ou un processus métier pour créer un Data Mart.*
+
+**2- Decider du grain**. Le grain désigne le niveau de donnnées stocké dans la table des faits. Il n'est pas obligatoire mais il s'agit du niveau le plus bas possible, essentiellement un niveau où il n'est plus possible de diviser les données. 
+
+Pour faire simple, il faut que la table faits traite les données ou opérations du service/processus de manière individuelle, sinon le DM rique d'être inutile ou moins precieux.
+
+**3- Choisir les dimensions qui s'appliquent à chaque ligne de la table de faits**.
+
+Repondre à la question "Comment les utilisateurs de l'organisation décrivent les données resultants des processus métiers ?" aide à reussir cette étape.
+
+**4- Identifier les faits numériques qui rempliront chaque de la table de faits**.
+
+Demander aux utilisateurs de repondre à la question "à quoi repondons-nous?" aide à identidier les faits chiffrés à inclure.
+
+*Rappelons que le but du DW est de rendre compte et d'analyser le processus organisationel. Nous devons aussi decider des mesures numériques essentilles à stocker pour repondre ulterieurment aux questions probables sur le processus.*
+
+*Enfin, le fait ou la métrique choisie doit être valide au grain selectionné à l'étape 02.*
