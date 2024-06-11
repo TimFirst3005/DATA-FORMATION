@@ -182,7 +182,11 @@ Dans une entreprise de carte crédit, un système OLTP peut suivre l'achat de ch
 OLAP est conçu pour prendre en charge l'analyse des données, exécuter des requêtes complexes de BD relationnelles volumineuses tandis que OLTP est conçu pour être très rapide à effectuer des requêtes simples qui se concentrent sur quelques lignes de données.
 
 
+<<<<<<< HEAD
 ## **Modelisation des Données Dans le DW**
+=======
+## Modelisation des Données Dans le DW
+>>>>>>> ff199a4c98e7a91b6bfe0bb14f4af9988efa74e4
 
 **La modélisation** fait référence à la manière dont nous organisons les données dans une base de Données.
 
@@ -228,3 +232,6 @@ Demander aux utilisateurs de repondre à la question "à quoi repondons-nous?" a
 
 ## **ETL et ELT**
 
+**ETL - Extract Transform Load** fait les transformation dans un autre système extérieur avant d'être intégré dans le DW et donc le temps de traitement avant d'avoir les données disponibles dans le DW est long
+
+**ELT - Extract Load Tranform** commence par importer les données dans le DW avant de faire les traitements/transformation et donc il nécessite des coûts élevés pour la conception de DW mais son avantage est que les changements dans le processus de transformation des données se font assez facilement sans quitter l'écosystème du DW vers la sources primaire des données.
