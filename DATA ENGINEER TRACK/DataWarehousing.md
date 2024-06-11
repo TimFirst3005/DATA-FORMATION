@@ -1,6 +1,6 @@
 # INTRODUCTION A L'ENTREPOSAGE DE DONNEES/DATA WAREHOUSING
 
-## LES BASES DU DATA WAREHOUSE
+## **LES BASES DU DATA WAREHOUSE**
 
 ### C'est quoi un entrepot de données ?
 
@@ -47,7 +47,7 @@ C'est la phase où l'équipe forme les utilisateurs finaux et maintient le wareh
 - Le Data Engineer deploie met l'entrepot de données à la disposition de l'organisation. Après le déploiement, toute modification importante suivra les mêmes étapes à partir de la phase de planification.
 
 #
-## ARCHITECTURE ET PROPRIETES DE L'ENTREPÔT
+## **ARCHITECTURE ET PROPRIETES DE L'ENTREPÔT**
 
 ### **Differentes Couches d'un Data Warehouse**
 
@@ -182,7 +182,7 @@ Dans une entreprise de carte crédit, un système OLTP peut suivre l'achat de ch
 OLAP est conçu pour prendre en charge l'analyse des données, exécuter des requêtes complexes de BD relationnelles volumineuses tandis que OLTP est conçu pour être très rapide à effectuer des requêtes simples qui se concentrent sur quelques lignes de données.
 
 
-## Modelisation des Données Dans le DW
+## **Modelisation des Données Dans le DW**
 
 **La modélisation** fait référence à la manière dont nous organisons les données dans une base de Données.
 
@@ -222,4 +222,9 @@ Demander aux utilisateurs de repondre à la question "à quoi repondons-nous?" a
 *Enfin, le fait ou la métrique choisie doit être valide au grain selectionné à l'étape 02.*
 
 ***Attention, il faut également faire attention à prendre enconsideration le fait cetaines données des tables de dimensions changent sur le long terme.***
+
+
+## **IMPLEMENATION ET PREPARATION DES DONNEES**
+
+## **ETL et ELT**
 
