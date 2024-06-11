@@ -230,8 +230,16 @@ Demander aux utilisateurs de repondre à la question "à quoi repondons-nous?" a
 
 ## **IMPLEMENATION ET PREPARATION DES DONNEES**
 
-## **ETL et ELT**
+### **ETL et ELT**
 
 **ETL - Extract Transform Load** fait les transformation dans un autre système extérieur avant d'être intégré dans le DW et donc le temps de traitement avant d'avoir les données disponibles dans le DW est long
 
 **ELT - Extract Load Tranform** commence par importer les données dans le DW avant de faire les traitements/transformation et donc il nécessite des coûts élevés pour la conception de DW mais son avantage est que les changements dans le processus de transformation des données se font assez facilement sans quitter l'écosystème du DW vers la sources primaire des données.
+
+### Nettoyage de Données
+
+Lors de la mise en oeuvre du processus de transformation des données, l'équipe de mise en oeuvre évaluera les exigences organisationelles et utilisera une combinaisons de ces process et d'autres pour repondre aux besoins.
+- **Le nettoyage du format des données**: étant donné que nous avons plusieurs sources, les données n'ont pas forcement le même formatage. Par conséquent, il est essentiel d'utiliser des ègles d'organisation pour formater les données afin que le sortie soit cohérente.
+- **La validation des données**: il pourait s'agir de verifier et valider la plage de valeur, le type de données ou bien d'autres à partir d'une règle d'organistion qui peut être utiliser.
+- **L'analyse des adresses**: c'est aussi une opération typique de nettoyage de données, toutefois de nombreux outils d'ETL sont capables de le faire automatiquement.
+- **La déduplication des données** qui supprime les lignes de données répétées.
