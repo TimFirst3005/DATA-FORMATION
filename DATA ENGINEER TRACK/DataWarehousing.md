@@ -243,3 +243,28 @@ Lors de la mise en oeuvre du processus de transformation des données, l'équipe
 - **La validation des données**: il pourait s'agir de verifier et valider la plage de valeur, le type de données ou bien d'autres à partir d'une règle d'organistion qui peut être utiliser.
 - **L'analyse des adresses**: c'est aussi une opération typique de nettoyage de données, toutefois de nombreux outils d'ETL sont capables de le faire automatiquement.
 - **La déduplication des données** qui supprime les lignes de données répétées.
+
+### Mise en Oeuvre d'un DW
+
+Nous avons deux(02) possibilité aujourd'hui à savoir On-Premise(Localement au sein de l'organisation) ou sur le Cloud
+
+**On Premise** : qui presente plusieurs avantages à savoir 
+- Un contrôle maximum ce qui permet de mettre en place une gouvernance stricte des données et de mettre en oeuvre les contrôles de conformité réglementaire dont une organisation a besoin.
+- une personalisation sur tous les aspects de la mise en oeuvre et de la maintenance continue du DW.
+- Le DW étant sur le reseau local, le transfert de données avec d'autres systèmes est fluide et on évite les certains problèmes de bandes passante.
+- Enfin, le DW peut être reglé pour des performances optimales pour les charges de travail de l'organisation.
+
+Mais il presente des inconvenients à savoir:
+- Des coûts pour l'achat de tout l'équipement, le maintien et le personnel pour le maintien du système.
+- Des Coûts pour le suivi des correctifs  et des mises à jour de sécurité du système.
+
+**Cloud** : *(Amazon REDSHIFT, Azure Synapse Analytics, Snowflake, Google BigQuery)*
+
+Ils sont pour la plupart proposés sous forme de SaaS. Ici, le fournisseur de Cloud prend en charge l'équipement et l'infrastructure, en s'assurant que l'équipement reste opérationnel et le logiciel est sécurisé avec les derniers correctifs et mise à niveau.
+Il offre l'avantage de faire varier les ressources selon les besoins et surtout sans grand investissement initial.
+
+Par contre, sur le Cloud:
+- l'organisation a moins de contrôle sur le réglage du logiciel et de l'infrastructure.
+- Risque de coûts élevés selon l'utilisation des services .
+
+***Il y a aussi la possibilité d'utiliser un système hybride, c.à.d les deux systèmes***
