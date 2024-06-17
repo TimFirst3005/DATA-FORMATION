@@ -89,7 +89,7 @@ Les données sont ensuite transférées vers les Data Mart axés sur le service 
 - la création de nouveaux Data mart est relativement simple.
 
 **Désavantages**
-- Etant données que les données sont normalisées, elle necessitent davantages de jointures pour les rapports conduisant ainsi des réponses plus lentes
+- Etant donné que les données sont normalisées, elle necessitent davantages de jointures pour les rapports conduisant ainsi des réponses plus lentes
 - Egalement, l'alignement de l'organisation sur la définition données peut necessiter beaucoup de travail initial et donc *Un coup de demarage élevé pour les projets de DW*.
 
 
