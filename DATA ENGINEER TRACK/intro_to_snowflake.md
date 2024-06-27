@@ -173,3 +173,25 @@ Les commandes INSERT, UPDATE et MERGE sont similaires à celles de PostgresSQL
 - UPDATE pour mettre à jour les donnéesg
 - MERGE permet la fusion des données de deux tables, ce qui est utile pour synchroniser des tables similaires.
 - COPY INTO permet de charger les données d'un fichier ou d'une étape spécifié dans une table Snowflake.
+
+
+### Type de Données et Convertion des Type de Données dans Snowflake.
+
+**Types de Données**
+Voici une liste de types de données courants dans Snowflake : 
+*VARCHAR, NUMERIC, INT, DATE, TIME, TIMESTAMP*. Il y'a également VARIANT qui est très puissant pour stocker les données semi-structurées.
+
+Certains types sont identiques à ceux de Postgres à quelques différences près tels :
+- *VARCHAR* a une longueur max de 16.777.216 dans snowflake contre 65.535 dans Postgres
+- *NUMERIC* a une longueur de 38 pour snowflake contre 37 pour Postgres, ce qui a un impact sur le nombre de chiffres stockés avant et après la virgule.
+- *INTEGER*: la portée de snowflake dépasse de loin celle de Postgres.
+
+- *DATE* : Snowflake prend en charge plusieurs formats dont celui par defaut est `YYYY-MM-DD`
+- *TIME* : Snowflake capture les heures au format `HH-MI-SS`
+- *TIMESTAMP* pour une fusion de DATE et TIME dans un seul champ de notre table
+
+**Conversion**
+Snowflake propose plusieus méthodes de conversion 
+- CAST(Donnée_à_convertir AS type_cible)
+- Donnée_à_convertir `::` type_cible
+- Il est aussi possible d'utiliser le TO_TPYE_CIBLE. Par exemple TO_DATE(Données_à_convertir)
