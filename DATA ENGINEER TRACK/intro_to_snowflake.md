@@ -129,7 +129,7 @@ Snowflake suit le code SQL de l'Américan National Standards Institute(ANSI), ce
 
 Ici, nous explorerons différentes methodes de connexion à Snowflake et présenterons les commandes DDL de base de Snowflake.
 
-### Connexion
+##### Connexion
 Il existe différentes façon de se connecter à Snowflake. L'une des options les plus conviviales est l'interface Web Snowflake, souvent appelée Snowsight. Il vous suffit simplement de vous inscrire en créant un compte et commencer à explorer.
 Snowflake propose des Worksheets(feuilles de travail) pour créer et exécuter des requètes.
 
@@ -150,7 +150,26 @@ Les données brutes, comme un fichier CSV, entrent d'abord dans cette zone de st
 ![alt text](image-5.png)
 
 
-### Les Commandes DDL(Langage de Définition des Données)
+##### Les Commandes DDL(Langage de Définition des Données)
 
 Elles sont utilisées pour définir et gérer la structure d'une base de données comme  créer des tables ou définir des relations (CREATE, ALTER, DROP, RENAME, COMMENT)
 Elles sont toutes presque similaires dans l'utilisation.
+
+### Structure des Bases de Données et DML
+
+*Ici, nous explorerons les différents objets dans Snowflake et un aperçu des commandes DML*
+
+SHOW, DESCRIBE, INSERT, UPDATE, MERGE, COPY.
+
+##### Structure
+Les commandes INSERT, UPDATE et MERGE sont similaires à celles de PostgresSQL
+
+**Explorons chacune**
+- SHOW permet d'afficher et donner des informations
+- DESCRIBE ou DESC permet d'obtenir des infomations plus détaillées
+
+**Commandes DML(Data Manipulation Language)**
+- INSERT: Snowflake permet d'inserer le resultat d'une requète dans une table.
+- UPDATE pour mettre à jour les donnéesg
+- MERGE permet la fusion des données de deux tables, ce qui est utile pour synchroniser des tables similaires.
+- COPY INTO permet de charger les données d'un fichier ou d'une étape spécifié dans une table Snowflake.
