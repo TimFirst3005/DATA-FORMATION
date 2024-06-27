@@ -122,3 +122,35 @@ Il offre une interface conviviale avec une faible courbe d'apprentissage, ci qui
 ***SnowflakeSQL et PostgreSQL sont-ils similaires ?***
 **Oui**, ils sont tous les deux assez similaires.
 Snowflake suit le code SQL de l'Américan National Standards Institute(ANSI), ce qui signifie que si nous connaissons PostgreSQL, nous pouvons rapidement commencer à utiliser SnowflakeSQL.
+
+## Snowflake SQL et ses concepts clés
+
+#### Connexion à Snowflake et Commandes DDL
+
+Ici, nous explorerons différentes methodes de connexion à Snowflake et présenterons les commandes DDL de base de Snowflake.
+
+### Connexion
+Il existe différentes façon de se connecter à Snowflake. L'une des options les plus conviviales est l'interface Web Snowflake, souvent appelée Snowsight. Il vous suffit simplement de vous inscrire en créant un compte et commencer à explorer.
+Snowflake propose des Worksheets(feuilles de travail) pour créer et exécuter des requètes.
+
+Snowflake prend également en charge des 
+- connexions via les pilotes **ODBC**(**O**pen **D**atabase **C**onnectivity) et **JDBC** (**J**ava **D**atabase **C**onnectivity). Ceux-ci permettent à des outils tels que DB Visualizer et Tableau d'accéder aux Bases de Données de Snowflake
+- Connecteurs spécialement conçus pour les langages tels que Python, Spark et plus afin d'améliorer l'intégration de Snowflake.
+
+
+**SnowSQL**
+SnowSQL est un autre moyen de se connecter directement à son compte Snowflake à l'aide de de la ligne de commande.
+Pour l'utiliser, il faut l'installer. Il propose des version pour Linux, Windows et Mac.
+
+***Parlons maintenant du staging de Snowflake***
+C'est en quelque sorte une zone d'attente où les fichiers de données sont temporairement stockés avant d'être chargés dans les tables principales.
+Lorsque les données sont stockées dans Snowflake, on parle de **staging interne**; si elles sont stockées sur des plateformes externes comme Amazon S3 ou Google Cloud Storage, on parle de **staging externe**.
+
+Les données brutes, comme un fichier CSV, entrent d'abord dans cette zone de staging. Ensuite, sont chargées dans les tables de la bases de données.
+![alt text](image-5.png)
+
+
+### Les Commandes DDL(Langage de Définition des Données)
+
+Elles sont utilisées pour définir et gérer la structure d'une base de données comme  créer des tables ou définir des relations (CREATE, ALTER, DROP, RENAME, COMMENT)
+Elles sont toutes presque similaires dans l'utilisation.
