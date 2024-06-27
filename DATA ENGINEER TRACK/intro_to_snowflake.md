@@ -84,3 +84,41 @@ Nous payons uniquement pour les entrepôts virtuels que nous utilisons afin d'é
 Celle-ci garantit que lorsque nous exécutons une requète, les bonnes ressources, le calcul et le stockage sont alloués éfficacement pour obtenir des résultats plus rapides.
 Il est également chagé de maintenir la sécurité de nos données et de contrôler l'accès aux données.
 Essentiellement, cette couche agit comme le chef d'orchestre, coordonant tous les aspects de Snowflake pour offrir une expérience utilisateur fluide, sécurisée et fiable.
+
+
+## Des Alternatives de Snowflake
+
+Voyons, avant de continuer notre exploration, des solutions similaires et comment Snowflake se compare à elles.
+
+**Solutions similaire**
+Aux titre des solutions similaires, nous pouvons citer *Google BigQuery*, *Amazon REDSHIFT* et *Databrics* qui sont des plateformes de données des trois(03) grands fournisseurs de cloud. Nous parlerons également de PostgreSQL qui est un SGBDR en essayant de mieux comprendre ses différences par rapport à Snowflake.
+
+
+**Fonctionalité** | **Snowflake** | **Google BigQuery** | **Amazon REDSHIFT** | **Databrics** | **PostgreSQL** |
+|:----------------|:-----------------|:-----------------|:------------------|:-------------------|:------------------|
+|**Architecture** | Dissocie le stockage et le calcul|Dissocie le stockage et le calcul|Peut associer ou dissocier le stockage et le calcul en fonction du cluster choisi|Dissocie le stockage et le calcul|PostgreSQL suit une architecture monolithique qui regroupe toutes les fonctionalités|
+| **Evolutivité** | évolution rapidement automatique, en ajustant le processeur, la mémoire et le stockage adapté aux demandes de charges de travail, garantissant performence et rentabilité.| évolution automatique|évolution automatique lente|évolution automatique|nécessite une mise à l'échelle manuelle|
+|**Gestion**|Nécessite moins d'effort de gestion|Nécessite moins d'effort de gestion| Nécessite plus d'effort de gestion|Nécessite plus d'effort de gestion|Nécessite plus d'effort de gestion|
+
+Toutes ces solutions fournissent des contrôles d'accès et garantissent la sécurité et la confidentialité des données.
+Elles proposent également le cryptage pour garantir que les données rentent protégées. Cependant chacune dispose de moyens différents  pour y parvenir.
+Elles disposent toutes d'un support de données semi-structurées (JSON, Avro, Parquet, CSV)
+
+DataBrics, en plus, prends également en charge les données non structurées telles que le texte, les images et l'audio.
+
+**Intégration et facturation**
+
+**Fonctionalité** | **Snowflake** | **Google BigQuery** | **Amazon REDSHIFT** | **Databrics** | **PostgreSQL** |
+|:----------------|:-----------------|:-----------------|:------------------|:-------------------|:------------------|
+|**Intégration avec les fournisseurs de solutions cloud**| Prend en charge le multi-cloud nativement|Prend en charge le multi-cloud et plusieurs connecteurs|Single cloud, il est hébergé dans son propre écosystème| Prend en charge le multi-cloud nativement| Postgres peut être déployé sur plusieurs plateformes cloud|
+
+La plupart des fournisseurs de cloud proposent différement les tarifs de calcul et de stockage; certaines par secondes et d'autres par emplacement, c'est à dire par processeur virtuel utilisé pour exécuter des ressources.
+PostgreSQL, particulièrement, est open source mais les prix varient en fonction du fournisseur d'hébergement.
+
+Encore une fois, ce qui rend Snowflake unique, c'est architecture de calcul et de stockage découplée qui le rend idéal pour les charges de travail nécessitant beaucoup de traitement de données ou qui doivent évoluer rapidement. Il permet un partage sécurisé de données entre organsations, departement ou utilisateurs, garantissant la confidentialité et l'intégrité des données
+
+Il offre une interface conviviale avec une faible courbe d'apprentissage, ci qui  le rend facile à utiliser. Cela en fait une bonne optionpour les organisations qui decouvrent les entrepôts de données.
+
+***SnowflakeSQL et PostgreSQL sont-ils similaires ?***
+**Oui**, ils sont tous les deux assez similaires.
+Snowflake suit le code SQL de l'Américan National Standards Institute(ANSI), ce qui signifie que si nous connaissons PostgreSQL, nous pouvons rapidement commencer à utiliser SnowflakeSQL.
