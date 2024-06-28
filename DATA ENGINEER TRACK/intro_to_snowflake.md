@@ -260,3 +260,17 @@ Bien que Snowflake soit robuste, il presente quelques limites en ce qui concerne
 **CTE - Common Table Expressions**
 Lorsque les sous-requêtes deviennent complexes et comportent de nombreuses conditions, nous avons besoin d'une approche plus propre et plus flexible. C'est là que les CTE s'averent utiles.
 Le CTE, pour simplifier, c'est le fait de donner un surnom à une requête afin que nous puissions l'utiliser dans une autre requête en y faisant référence comme tout autre table.
+
+
+### Optimisation de requêtes dans Snowflake
+
+L'optimisation d'une requête consiste à transformer une requête en une version plus éfficace.
+Nous savons que la couche des Services Cloud de Snowflake dispose d'un moyen d'optimisation des requêtes. Cependant, la manière dont nous redigeons nos requêtes compte également. Une requête bien structurée permet à Snowflake de l'optimiser plus éfficacement.
+L'éfficacité ici signifie deux(02) indicateurs clés : la rapidité et le coût. Et donc, une requête optimisée donne des resultats plus rapides, ce qui permet de gagner du temps. En ce qui concerne le coût, des temps de requêtes courts dans Snowflake permettent d'économiser de l'argent.
+
+
+***Quelques problèmes courants susceptibles de la ralentir les requêtes***
+- **Les jointures**: l'un des principaux responsables est l'explosion des jointures qui se produit lorsque nous oublions de specifier les conditions de jointure. Cela peut créer un produit cartésien, conduisant ainsi à des resultats nettement plus importants.
+- **UNION au lieu de UNION ALL** : Le fait d'utiliser UNION alors que UNION ALL peut faire l'affaire. UNION supprime les doublons mais cela prend plus de temps à le faire. Et donc, si nous sommes sûr que nos données ne contiennent pas de doublons, utiliser UNION ALL pourrait produire des resultats plus rapides.
+- **Filtres et Limites** : l'utilisation des filtres et des limites peut produire des resultats plus rapides et plus rentables lorsqu'il s'agit  de grands ensembles de données.
+- **Filtres avant jointure** : Appliquer les filtres avant les jointures via l'uilisation des CTE permet de gagner en efficacité (rapidité et economie en ressources).
