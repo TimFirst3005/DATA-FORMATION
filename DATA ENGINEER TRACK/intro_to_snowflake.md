@@ -195,3 +195,10 @@ Snowflake propose plusieus méthodes de conversion
 - CAST(Donnée_à_convertir AS type_cible)
 - Donnée_à_convertir `::` type_cible
 - Il est aussi possible d'utiliser le TO_TPYE_CIBLE. Par exemple TO_DATE(Données_à_convertir)
+
+
+### Fonctions, Tri et Regroupement
+
+Dans snowflake comme dans Postgre, nous retrouvons presque les même fonctions, les mêmes Clauses pour les tris et regroupement. 
+Pour le groupement, Snowflake propose une nouvelle clause qui est `GROUP BY ALL`. Celle-ci permet de grouper les resultats de nos requètes par toutes les colonnes énumérées dans la clause SELECT et donc d'éviter d'énumérer plusieurs colonnes dans le `GROUP BY` habituelle comme dans Postgres.
+
