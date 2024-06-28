@@ -245,3 +245,18 @@ LATERAL
 Un des avantages est qu'il nous évite les requêtes avec plusieurs JOIN qui ralentissent  considérablement la requête et augmentent les coûts de calcul.
 
 Nous aborderons les techniques de reduction des coûts par la suite.
+
+
+### Sous-requêtes et CTE
+
+**Sous-requête**
+Comme nous le savons déjà, c'est une requête imbriquée dans une autre, couramment utilisée dans les clauses FROM, HAVING, WHERE ou SELECT pour affiner les resultats ou analyser les données.
+Snowflake prend en charge les sous-requêtes corrélées et les non corrélées.
+
+**Pour rappel**, une sous-requête corrélée fait référence aux colonnes de la requête externe ou principale et une sous-requête non corrélée fonctionne indépendamment de la requête principale.
+
+Bien que Snowflake soit robuste, il presente quelques limites en ce qui concerne les sous-requêtes. Il ne prends pas en charge l'utilisation de `LIMIT` dans une sous-requête corrélée.
+
+**CTE - Common Table Expressions**
+Lorsque les sous-requêtes deviennent complexes et comportent de nombreuses conditions, nous avons besoin d'une approche plus propre et plus flexible. C'est là que les CTE s'averent utiles.
+Le CTE, pour simplifier, c'est le fait de donner un surnom à une requête afin que nous puissions l'utiliser dans une autre requête en y faisant référence comme tout autre table.
