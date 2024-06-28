@@ -123,7 +123,7 @@ Il offre une interface conviviale avec une faible courbe d'apprentissage, ci qui
 **Oui**, ils sont tous les deux assez similaires.
 Snowflake suit le code SQL de l'Américan National Standards Institute(ANSI), ce qui signifie que si nous connaissons PostgreSQL, nous pouvons rapidement commencer à utiliser SnowflakeSQL.
 
-## Snowflake SQL et ses concepts clés
+# Snowflake SQL et ses concepts clés
 
 #### Connexion à Snowflake et Commandes DDL
 
@@ -202,3 +202,46 @@ Snowflake propose plusieus méthodes de conversion
 Dans snowflake comme dans Postgre, nous retrouvons presque les même fonctions, les mêmes Clauses pour les tris et regroupement. 
 Pour le groupement, Snowflake propose une nouvelle clause qui est `GROUP BY ALL`. Celle-ci permet de grouper les resultats de nos requètes par toutes les colonnes énumérées dans la clause SELECT et donc d'éviter d'énumérer plusieurs colonnes dans le `GROUP BY` habituelle comme dans Postgres.
 
+
+# Concepts Avancés DE Snowflake SQL
+
+*Ici nous aborderons quelques concepts avancés de Snowflake SQL*
+
+### Les Jointures
+`INNER JOIN`,
+ `OUTER JOIN` (`LEFT JOIN` ou `LEFT OUTER JOIN`, `RIGHT JOIN` ou `RIGHT OUTER JOIN`, `FULL JOIN` ou `FULL OUTER JOIN`), 
+ `CROSS JOIN` 
+ et `SELF JOIN`
+
+*Nous aborderons plus spécifiquement les jointures dites naturelles et latérales.*
+`NATURAL JOIN` et `LATERAL JOIN`
+Nous savons déjà que les jointure sont un moyen de combiner les données de plusieurs tables.
+Les mécanismes de jointure dans Snowflake sont les même que celles dans le SGBDR PostgreSQL.
+
+**NATURAL JOIN**
+Contrairement aux jointures standard, le `NATURAL JOIN` élimine les colonnes en doubles en faisant automatiquement correspondre les colonnes portant le même nom pendant qu'avec un `JOIN` standard les colonnes portant les mêmes noms se repètent.
+
+Voici la syntaxe:
+```
+SELECT ...
+FROM <première table> [
+                    {
+                        |NATURAL [ { LEFT|RIGHT|FULL } [OUTER ] ]
+                    }
+                   ]JOIN <deuxième table>
+[ ... ]
+```
+
+**LATERAL JOIN**
+C'est une fonctionnalité SQL puissante qui apporte plus de flexibilité à nos requêtes. Elle permet à une sous requête dans la clause FROM d'acceder aux colonnes d'une table ou d'une vue précédente. Ainsi, lorque nous utilisons `LATERAL`, la sous-requête de droite peut faire référence à des colonnes de la table de gauche, ce qui rend les requêtes plus dynamiques.
+
+Syntaxe : 
+```
+SELECT ...
+FROM <left_hand_expression> , -- 
+LATERAL
+(<right_hand_expression>)
+```
+Un des avantages est qu'il nous évite les requêtes avec plusieurs JOIN qui ralentissent  considérablement la requête et augmentent les coûts de calcul.
+
+Nous aborderons les techniques de reduction des coûts par la suite.
