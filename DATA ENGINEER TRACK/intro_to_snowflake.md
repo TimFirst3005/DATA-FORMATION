@@ -274,3 +274,26 @@ L'éfficacité ici signifie deux(02) indicateurs clés : la rapidité et le coû
 - **UNION au lieu de UNION ALL** : Le fait d'utiliser UNION alors que UNION ALL peut faire l'affaire. UNION supprime les doublons mais cela prend plus de temps à le faire. Et donc, si nous sommes sûr que nos données ne contiennent pas de doublons, utiliser UNION ALL pourrait produire des resultats plus rapides.
 - **Filtres et Limites** : l'utilisation des filtres et des limites peut produire des resultats plus rapides et plus rentables lorsqu'il s'agit  de grands ensembles de données.
 - **Filtres avant jointure** : Appliquer les filtres avant les jointures via l'uilisation des CTE permet de gagner en efficacité (rapidité et economie en ressources).
+
+
+### Gestion des données semi-structurées
+
+Après, maitrisé le sujet de l'optimisation de nos requêtes, nous plongeons maintenant dans la gestion des données semi-structurées.
+
+Bien que les données semi-structurées n'aient pas de structure définitive comme celle structurées, elle offrent une flexibilité.
+
+L'un de ces types de données est le JSON pour JavaScript Object Notation, un format de données couramment utilisé dans les API, le developpement d'applications et les fichiers de configuration. Il est au format `Clé : Valeur`.
+Une bonne nouvelle est que Snowflake prend en charge nativement le JSON; il dispose de fonctionalités intégrées pour stocker, traiter et intéroger efficacement des fichers de données JSON.
+A titre de comparaison, Postgres gère les données JSON en utilisant le type de données `JSNOB`, tandis que Snowflake utilise le type de données `VARIANT`. Le type `VARIANT` prend charge  à la fois les données d'objet(*paires `Clé : Valeur`*) et de tableau(*liste ordonnée de valeurs*).
+
+***Voyons comment travailler avec les données semi-structurées comme JSON***
+- **`PARSE_JSON`** est une fonction qui permet de convertir les chaines au format JSON en type VARIANT en renvoyant un objet JSON valide, ce sui simplifie la façon dont nous stockons et intérrogeons les JSON.
+- **`OBJECT_CONSTRUCT`** est une fonction qui prend des paires clé-valeur et renvoie un objet JSON.
+
+
+***Comment intérroger une colonne de données JSON***
+
+- `:` Permet de recupérer les valeurs de clés spécifiques d'une colonne contenant une données au format JSON. (par exemple `nom_colonne:clé`)
+- `:` ou `.` permet de recupérer les valeurs imbriquées dans le JSON. (par exemple `colonne:clé_niveau1:clé_niveau2:clé_niveau3` ou `colonne:clé_niveau1.clé_niveau2.clé_niveau3`).
+
+
