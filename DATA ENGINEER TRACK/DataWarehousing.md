@@ -8,9 +8,9 @@ Il s'agit tout simplement d'un système informatique conçu pour stocker et anal
 
 Il rassemble des données provenant de divers domaines d'une organisation. Ensuite, il intègre et stock ces données et les disponibles pour analyse.
 
-Elle est construite dans l'objectif de :
+Il est construit dans l'objectif de :
 - soutenir les activités de renseignement, tels les KPIs
-- conduire la prise de décision organisationnelle, avec l'object de trouver des moyens d'innover en se basant sur les informations tirées des données après analyses.
+- conduire la prise de décision organisationnelle, avec l'objectif de trouver des moyens d'innover en se basant sur les informations tirées des données après analyses.
 
 
 ### Différences Data Warehouse, Data Mart et Data Lake
@@ -21,7 +21,7 @@ Les BD utilisent des tables pour stocker des informations de manière structuré
 
 **Le Data Mart** est un peu comme le Data Warehouse mais à la difference, il stock les données d'un seul domaine de l'organisation et il est généralement extrait du Data Warehouse.
 
-Le Data Lake, à la différence du Data Warehouse, peut aussi contenir des données non structurées.
+**Le Data Lake**, à la différence du Data Warehouse, peut aussi contenir des données non structurées.
 
 
 ### Analyse Organisationnelle de Data Warehouse
