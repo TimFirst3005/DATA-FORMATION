@@ -59,3 +59,24 @@ Ces différents outils utilisés pour créer flux de travail se trouvent dans la
 
 
 *Les flux de travail sont facilement automatisable et les processus appliqués sont visibles pour les utilisateur.*
+
+
+## La Navigation Dans Alteryx Designer Desktop
+
+**Alteryx Designer Desktop** a une interface qui comporte quatre(04) principaux composants utilisés pour créer des flux de travail.
+![alt text](<Capture d'écran 2024-07-12 171309-1.png>)
+
+1. **La palette d'outils** : contient tous les outils nécessaires pour importer et gérer des données.
+
+Tous les outils sont divisés en catégories par rapport à leurs fonctions. Chaque catégorie a sa propre couleur et sa propre forme d'outil, ceci pour faciliter la tâche et comprendre le flux de manière global simplement à regarder.
+
+
+2. **Le Canevas** :  C'est l'endroit où vous pouvez utiliser les outils pour créer un flux de travail afin d'éffectuer les taches de données.
+Il existe plusieurs façon d'y ajouter un outil, via:
+-  Glisser-déposer l'outil depuis la palette d'outil
+- Clic droit de la sourie dans un espace vide du canevas
+- Rechercher l'outil dans la barre de recheche(située dans le supérieur droit de la palette d'outil)  et le glisser sur dans le canevas.
+
+3. **La fenètre de configuration** : Permet de configurer chaque outil dans le Canevas afin d'adapter un flux de travail au besoin. Les composants de cette fenètre varient en fonction de l'outil séléctionné. Lorsqu'il y a une erreur dans la configuration d'un outil, vous pourrez constater un "**!**" rouge sur l'outil.
+
+4. **La fenètre de résultats** : Permet, intuitivement, d'afficher les resultats des flux.
