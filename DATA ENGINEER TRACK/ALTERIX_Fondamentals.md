@@ -1,4 +1,4 @@
-*Ceci est un mémo pour presenter un peu, l'outil d'ingénieurie de données, Alteryx et avoir de bonnes bases.*
+*Ceci est un mémo pour presenter un peu, l'outil d'ingénieurie de données, Alteryx et avoir de bonnes bases*.
 
 # INTRODUCTION A ALTERYX
 
@@ -80,3 +80,15 @@ Il existe plusieurs façon d'y ajouter un outil, via:
 3. **La fenètre de configuration** : Permet de configurer chaque outil dans le Canevas afin d'adapter un flux de travail au besoin. Les composants de cette fenètre varient en fonction de l'outil séléctionné. Lorsqu'il y a une erreur dans la configuration d'un outil, vous pourrez constater un "**!**" rouge sur l'outil.
 
 4. **La fenètre de résultats** : Permet, intuitivement, d'afficher les resultats des flux.
+
+## Utilisation des outils dans Alteryx Designer
+
+Lorsque vous utilisez la fonction **Input Data** de l'outil **In/out** pour importer des données, celle-ci n'affiche que le premier Méga Octet de votre ensemble de données. Un outil différent est requis pour afficher l'ensemble des données complet dans la fenètre des résultats, ainsi que les informations supplementaires, telles que les profils de données d'un ensemble de données.
+
+Cela se fait avec l'outil **Parcourir/Browse 👀** en le faisant glisser vers le Canevas et le connectant avec l'outil déjà présent dans le canevas via les encres d'entrée et sortie.
+![alt text](<Capture d'écran 2024-07-15 163941.png>)
+
+Quelque soit l'outil selectionné, il est également possible de voir les metadonnées de notre ensemble de données en cliquant sur le boutton Metadonnées dans la fenêtre des resultats.
+
+Tout autre ajout d'outil au Canevas se fait par le même procédé, c'est seulement la configuration de l'outil qui change.
+
