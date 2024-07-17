@@ -152,3 +152,29 @@ Il permet de trier vos données en fonction de la valeur d'une ou plusieurs colo
 **L'outil SAMPLE**
 
 Lui permet de créer un échantillon de votre ensemble de données dans le flux, avec une gamme d'options disponibles pour déterminer l'échantillon.
+
+## Synthèse Des Données
+
+### Unicité et transformation
+
+**Suppression des doublons**
+
+Il est très important de comprendre ce qui signifie les doublons dans le contexte de votre ensemble de données car cela peut varier d'un ensemble de données à l'autre et ce qui est considéré comme doublons peut ne pas l'être. 
+
+Dans Alteryx Designer, les doublons sont supprimés à l'aide de l'outil **UNIQUE** qui se trouve dans l'ensemble d'outils de préparation.
+
+Supprimer les doublons nous permet d'améliorer la qualité  de nos données et donc améliorer la précision de nos analyses. Il est toujours préférable de le faire le plus tot possible.
+
+**Agrégation des données**
+
+Il consiste à resumer de grands volumes de données  dans un format simplifié et condensé et permet d'obtenir des informations significatives. L'objectif est de reduire la complexité et de rendre les données plus accéssibles et compréhensibles pour l'analyse, le reporting ou la prise de décision.
+
+L'outil permettant de faire les agrégations dans Alteryx Designer est **Summarize** qui se trouve dans l'ensemble des outils de transformation de données.
+
+![alt text](image-6.png)
+
+En plus des opérateurs d'agrégation de base(Count, AVG, SUM, ...), Alteryx Designer propose des opérateurs liés aux données numériques, de chaines et spatiales. Même les calcules financiers 
+
+Alteryx Designer propose l'outil **Comment**, qui permet de documenter et communiquer des informations importantes au sein de votre flux de travail.
+
+Il est très utile car lors du partage de fichiers et flux de travail, il permettra aux autres utilisateurs de comprendre les procesus inclus et pourquoi.
