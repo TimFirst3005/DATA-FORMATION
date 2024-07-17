@@ -92,3 +92,63 @@ Quelque soit l'outil selectionné, il est également possible de voir les metado
 
 Tout autre ajout d'outil au Canevas se fait par le même procédé, c'est seulement la configuration de l'outil qui change.
 
+# PREPARATION DES DONNEES DANS ALTERYX DESIGNER
+
+### C'est quoi la préparation des données et pourquoi est-elle nécessaire !?
+
+C'est une étape cruciale de l'analyse de données qui implique le nettoyage, la transformation et l'organisation ou gestion des données brutes.
+
+![alt text](<Capture d'écran 2024-07-15 172511.png>)
+
+Ces données propres et de meilleurs qualité sont essentielles pour garantir des resultats d'analyse  précis et significatifs.
+
+Certaines tâches que nous pourrions effectuer pour preparer et nettoyer les données incluent de :
+- s'assurer qu'elles soient exempt des valeurs manquantes, des fautes de frappe et d'entrée en double.
+- Confirmer que les données sont pertinantes.
+- s'assurer que les types de données corrects sont appliqués aux colonnes.
+- Il est essentiel d'utiliser des noms courts et descriptifs pour les colonnes et les tables.
+
+
+![alt text](<Capture d'écran 2024-07-15 173418.png>)
+
+Préparer les données dès le départ vous évite les surprises lors des analyses, vous permet de travailler plus éfficacement, posant les bases de conclusions éclairées et une prise de décision éfficace.
+
+Ce procesus de préparation des données est similaire à certaines tâches du bibliothécaire de notre Lycée DC. En effet, lors de l'ajout de nouveaux livres et revues à la collection de la bibliothèque, certain processus sont nécessaire pour tout organiser, comme :
+- Classer les nouveaux livres en fonction de critères tels que l'auteur et le genre.
+- Ajout des étiquètes et catalogues aux livres de manière appropriée pour être facilement accéssibles, organisés, identifiés et triés dans les zones de la bibliothèque.
+
+![alt text](<Capture d'écran 2024-07-16 112411.png>)
+
+De la même que cette bibliothèque doit être ordonnée, vous devez aussi ordonner les données pour leur donner un sens.
+
+ALTERYX DESIGNER dispose de nombreux  outils qui peuvent nous aider à exécuter les tâches de préparation de nos données qui sont accéssible à partir de l'ensemble des outils de preparation.
+
+![alt text](<Capture d'écran 2024-07-16 113705.png>)
+
+***⚠️⚠️⚠️ Il faut veiller à toujours selectionner le type de données correct pour chaque colonne de l'ensemble de données car cela joue un rôle très important pour la suite. ⚠️⚠️⚠️***
+
+### Les Types de Données dans Alteryx 
+
+![alt text](<Capture d'écran 2024-07-16 152441.png>)
+- **Booleen**
+- **Numeric** qui inclue les Bytes, Entier, Decimal Fixe et les flottants.
+- **String** qui peut être classé comme : 
+    * String 
+    * V_String, utilisé pour des longeurs de texte variable
+    * V_WString.
+- **Datetime** 
+- **Spatial**
+
+### Quelques Outils
+
+**L'outil SELECT**
+
+Extremement utile pour la préparation des données, il permet de selectionner les colonnes que vous souhaitez concerver dans le flux de travail mais permet également de selectionner le type de données approprié pour chaque colonne, modifier les noms des colonnes et ajouter des descriptions.
+
+**L'outil SORT**
+
+Il permet de trier vos données en fonction de la valeur d'une ou plusieurs colonnes de l'ensemble de données.
+
+**L'outil SAMPLE**
+
+Lui permet de créer un échantillon de votre ensemble de données dans le flux, avec une gamme d'options disponibles pour déterminer l'échantillon.
